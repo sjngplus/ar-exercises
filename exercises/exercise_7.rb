@@ -13,4 +13,8 @@ puts "----------"
 
 new_store_name = gets.chomp
 
-puts Store.create(name: new_store_name)
+store5 = Store.create(name: new_store_name)
+
+store5.errors.full_messages.each do |error|
+  puts error
+end
